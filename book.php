@@ -7,7 +7,7 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 <head>
-<title>本</title>
+<title>Book</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/CSS.css">
@@ -36,7 +36,7 @@ if(isset($_GET['id'])){
         if ($result_nt->num_rows > 0) {
             while($row_nt = $result_nt->fetch_assoc()) {
                 echo "<div class='w3-quarter w3-card' style='margin-left:50px;margin-top:60px'>";?>
-                <a href="info.php?id='<?php echo($row_nt['idSach']);?>'"><button class="w3-button"><img title="click vào ảnh để xem chi tiết hơn" src='<?php echo($row_nt['image']);?>' style='width:100%;height:320px'/></button></a>
+                <a href="info.php?id='<?php echo($row_nt['idSach']);?>'"><button class="w3-button"><img title="画像をクリックすると詳細が表示される" src='<?php echo($row_nt['image']);?>' style='width:100%;height:320px'/></button></a>
                 <?php
                 echo "<p class='w3-border w3-yellow'>".$row_nt['gia']."</p>";
                 //echo "<a href='info.php?id=".$row_nt['idSach']."'><button class='w3-button w3-blue w3-round'>Mua</button></a>";                             
