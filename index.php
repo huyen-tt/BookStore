@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="css/CSS.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" href="img/logo_bs.png">
+<link rel="icon" href="image/logo_bs.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -67,15 +67,16 @@
                 if($tien>2000000)
                 echo"<sup><img src='image/tt.png' width='60px'></sup>";
             }?></a></span>
+            <span ><a style="color:white" href="#sale" class='w3-button'>セール (Sale)</a></span>
             <span ><a style="color:white" href="#contact" class='w3-button'>アシスト (Help)</a></span>
             <span style='display'>
         <?php
 			if(isset($_SESSION['username'])){
                 ?>
-                  <a href="exit.php"><button class="w3-button w3-red w3-small w3-round w3-display-right">ログアウト</button></a>
+                  <a href="exit.php"><button style="margin-right:10px" class="w3-button w3-red w3-small w3-round w3-display-right">ログアウト</button></a>
                 <?php
 			}else{
-				?><a href="login.php"><button class="w3-button w3-blue w3-small w3-round w3-display-right">ログイン</button></a><?php
+				?><a href="login.php"><button style="margin-right:10px" class="w3-button w3-blue w3-small w3-round w3-display-right">ログイン</button></a><?php
 			}
         ?>
         </span>
@@ -111,13 +112,13 @@
     </div>
     <div id="style1" class="w3-block w3-center">
 
-        <button  class="w3-button">画集本</button>
-        <button class="w3-button">子供向けの本</button>
-        <button class="w3-button ">少年向けの本</button>
-        <button class="w3-button">歴史の本</button>
-        <button class="w3-button" >料理の本</button>
-        <button class="w3-button">ロマンスの本</button>
-        <button class="w3-button">ミステリーの本</button>
+        <a href="#nghethuat"><button  class="w3-button">画集本</button></a>
+        <a href="#treem"><button class="w3-button">子供向けの本</button></a>
+        <a href="#thieunien"><button class="w3-button ">少年向けの本</button></a>
+        <a href="#lichsu"><button class="w3-button">歴史の本</button></a>
+        <a href="#nauan"><button class="w3-button" >料理の本</button></a>
+        <a href="#langman"><button class="w3-button">ロマンスの本</button></a>
+        <a href="#bian"><button class="w3-button">ミステリーの本</button></a>
     </div>
     <div class="w3-threequarter">
             <div class="w3-content w3-section" style="max-width:100%">
@@ -366,8 +367,8 @@
     ?>
     </div>
     <!-- Sale -->
-    <div id="sale" class='w3-center'>*****</div>
-    <div class="w3-black" id="tour">
+    <div class='w3-center'>*****</div>
+    <div class="w3-black"  id="sale">
         <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <img class='w3-round' src='image/sale.jpg' style='width:50%;height:130px;margin-left:190px'>
         <p class="w3-opacity w3-center"><i>セール !</i></p><br>
