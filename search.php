@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/CSS.css">
-<link rel="icon" href="image/logo.png">
+<link rel="icon" href="image/logo_bs.png">
 </head>
 <body> 
 <div style="background-color:rgba(34, 34, 51, 0.85);position:fixed;width:260px;height:100%" class='w3-container'>
-    <a href='index.php'><img class='w3-round' src="image/logo.png" width="80%" style="margin-left:20px;margin-top:20px"></a>
+    <a href='index.php'><img class='w3-round' src="image/logo_bs.png" width="80%" style="margin-left:20px;margin-top:20px"></a>
     <hr>
     <h2 class="w3-yellow">結果 :<?php echo($_POST['search']);?></h2>
     <a href="index.php" class="w3-button w3-green w3-small">ホームページに戻る</a><br><hr>
@@ -29,7 +29,7 @@
                 <a href="info.php?id='<?php echo($row_nt['idSach']);?>'"><button class="w3-button"><img title="画像をクリックすると詳細が表示される" src='<?php echo($row_nt['image']);?>' style='width:100%;height:320px'/></button></a>
                 <?php
                 echo "<p class='w3-border w3-yellow'>".$row_nt['gia']."</p>";
-                //echo "<a href='info.php?id=".$row_nt['idSach']."'><button class='w3-button w3-blue w3-round'>Mua</button></a>";                             
+                //echo "<a href='info.php?id=".$row_nt['idSach']."'><button class='w3-button w3-blue w3-round'>買う</button></a>";                             
                 echo "</div>";
             }
         }else{

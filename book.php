@@ -13,7 +13,7 @@ if(isset($_GET['id'])){
 <link rel="stylesheet" href="css/CSS.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" href="image/logo.png">
+<link rel="icon" href="image/logo_bs.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +22,7 @@ if(isset($_GET['id'])){
 </head>
 <body>
 <div style="position:fixed;background-color:rgba(34, 34, 51, 0.85)">
-    <img class='w3-round' src="image/logo.png" width="8%" style="margin-left:10px;margin-top:10px;margin-bottom:10px">
+    <img class='w3-round' src="image/logo_bs.png" width="8%" style="margin-left:10px;margin-top:10px;margin-bottom:10px">
     <img class='w3-round' src="image/image_top.png" width="88%" height="54px" style="margin-left:10px;margin-top:10px;margin-bottom:10px">
 </div>
 <br><br>
@@ -39,7 +39,7 @@ if(isset($_GET['id'])){
                 <a href="info.php?id='<?php echo($row_nt['idSach']);?>'"><button class="w3-button"><img title="画像をクリックすると詳細が表示される" src='<?php echo($row_nt['image']);?>' style='width:100%;height:320px'/></button></a>
                 <?php
                 echo "<p class='w3-border w3-yellow'>".$row_nt['gia']."</p>";
-                //echo "<a href='info.php?id=".$row_nt['idSach']."'><button class='w3-button w3-blue w3-round'>Mua</button></a>";                             
+                //echo "<a href='info.php?id=".$row_nt['idSach']."'><button class='w3-button w3-blue w3-round'>買う</button></a>";                             
                 echo "</div>";
             }
         }
