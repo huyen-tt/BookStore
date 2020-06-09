@@ -78,7 +78,7 @@ if($_SESSION['username']!="admin"){
         ?><div id="users" class="w3-xxlarge w3-black">ユーザー</div><br>
         <div id="overflowTest1">
         <?php    
-        echo "<table class='w3-table w3-container'><tr class='w3-green'><th>Username</th><th>Password</th><th>Name</th><th>Email</th><th>Action</th></tr>";
+        echo "<table class='w3-table w3-container'><tr class='w3-green'><th>ニックネーム</th><th>パスワード</th><th>名前</th><th>メール</th><th>アクション</th></tr>";
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
@@ -132,7 +132,7 @@ if($_SESSION['username']!="admin"){
         ?><br><div id="booklist" class="w3-xxlarge w3-black">本リスト</div>
         <div id="overflowTest">
         <?php  
-        echo "<table class='w3-table w3-container'><tr class='w3-green'><th>ID</th><th>ID_Danh Mục</th><th>Tên Danh Mục</th><th>Tên Sách</th><th>Giá</th><th>Tác Giả</th><th>Mô tả</th><th>Action</th></tr>";
+        echo "<table class='w3-table w3-container'><tr class='w3-green'><th>ID</th><th>カテゴリーID</th><th>カテゴリー名</th><th>本名</th><th>価格</th><th>著者</th><th>デスクリプション/th><th>アクション</th></tr>";
         if ($results->num_rows > 0) {
             while($rows = $results->fetch_assoc()) {
                 echo "<tr>";
@@ -176,7 +176,7 @@ if($_SESSION['username']!="admin"){
     ?></div>
     <br>
     <div>
-            <strong class='w3-xxlarge w3-blue'>カスタマーレビュー</strong>
+            <strong class='w3-xxlarge w3-black'>カスタマーレビュー</strong>
             <div id="overflowTest">
                 <div>
                 <?php
@@ -199,7 +199,7 @@ if($_SESSION['username']!="admin"){
     </div>
     </div>
     <footer class="w3-center" style="background-color:rgba(34, 34, 51, 0.85)"> 
-        <p style="color:white">Copyright by ASK61</p>
+        <p style="color:white">Copyright by BookStore</p>
     </footer>
 </body>
 </html> 
