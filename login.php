@@ -9,7 +9,7 @@ session_start();
 	<link rel="stylesheet" href="css/CSS.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="icon" href="image/logo.png">
+	<link rel="icon" href="image/logo_bs.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -49,7 +49,7 @@ session_start();
 	}
 ?>
 	<div style="margin-left:43%">
-		<img class="w3-circle" src="img/logo_bs.png" width="24%"><br><br>
+		<img class="w3-circle" src="image/logo_bs.png" width="24%"><br><br>
 	</div>
 	<div class="w3-border w3-container w3-round-xlarge" style="margin-left:30%;margin-right:30%">
 		<div class="w3-container">
