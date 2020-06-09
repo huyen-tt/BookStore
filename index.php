@@ -360,13 +360,79 @@
                 <p>ログインしましたか？
                 </p>
                 <a href="login.php"><button class="w3-button w3-blue w3-round-xlarge">ログイン</button></a><br>
-                <span>アカウントがないのですか？<a style="color:red" href="register.php">レジスター</a></span>
+                <span>アカウントがないのですか？<a style="color:red" href="register.php"></a></span>
             </div><?php
         }
     ?>
     </div>
+    <!-- Sale -->
+    <div id="sale" class='w3-center'>*****</div>
+    <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <img class='w3-round' src='image/sale.jpg' style='width:50%;height:130px;margin-left:190px'>
+        <p class="w3-opacity w3-center"><i>セール !</i></p><br>
+
+        <ul class="w3-ul w3-border w3-white w3-text-grey">
+            <li class="w3-padding">4月 <span class="w3-tag w3-red w3-margin-left">本はありません</span></li>
+            <li class="w3-padding">5月 <span class="w3-tag w3-red w3-margin-left">本はありません</span></li>
+            <li class="w3-padding">6月 <span class="w3-round w3-right w3-margin-right">本が残っています</span></li>
+        </ul>
+
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+            <div class="w3-margin-bottom">
+            
+            <div class="w3-container w3-white">
+            <?php
+                require_once("connection.php");
+                $sql_sale = "SELECT * FROM sach,danhmuc WHERE id=idDM AND idDM=1";
+                $result_sale = $conn->query($sql_sale);  
+                if ($result_sale->num_rows > 0) {
+                    while($row_sale = $result_sale->fetch_assoc()) {
+                        echo "<div class='w3-quarter w3-white'>";?>
+                        <br>
+                        <img class='w3-hover-opacity' src='<?php echo($row_sale['image']);?>' style='width:100%;height:260px'/>
+                        <p class="w3-text-gray" style='margin-left:60px'><strike><?php echo $row_sale['gia']?></strike> đ</p>
+                        <p class="w3-text-red" style='margin-left:60px'><?php echo $row_sale['gia_sale']?> đ</p>
+                        <a class='w3-button w3-black' style='margin-left:43px' href="info.php?id='<?php echo($row_sale['idSach']);?>'">本を買う</a><br><br><?php               
+                        echo "</div>";
+                    }
+                }
+            ?>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- comment-->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center">連絡とコメント</h2>
+        <p class="w3-opacity w3-center"><i>質問とコメント</i></p>
+        <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width:30px"></i> Hanoi, VietNam<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone:0123456789<br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: abcdef@gmail.com<br>
+        </div>
+        <div class="w3-col m6">
+            <form action="comment.php" method="POST">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                </div>
+                <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+            </form>
+        </div>
+        </div>
+    </div>
 <br>
 
+<!--footer-->
 <footer class="w3-container w3-center" style='background-color:rgba(34, 34, 51,0.85)'>
     <br>                    
     <h2 class="w3-wide">BookStore</h2>
