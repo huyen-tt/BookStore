@@ -14,7 +14,7 @@ if($_SESSION['username']!="admin"){
     <link rel="stylesheet" href="css/CSS.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" href="image/logo.png">
+    <link rel="icon" href="image/logo_bs.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/CSS2.css">
@@ -61,7 +61,7 @@ if($_SESSION['username']!="admin"){
         </form></div>
     <br><br>
     <div style="margin-left:40%">
-        <img class="w3-circle" src="image/logo.png" width="36%"> 
+        <img class="w3-circle" src="image/logo_bs.png" width="36%"> 
     </div>
     <div>
         <h2 class="w3-center">ADMINへようこそ</h2>
@@ -112,13 +112,13 @@ if($_SESSION['username']!="admin"){
                 echo "</th>";
                 echo "<th>";
                 if($row['username']!="admin"){
-                    echo "<a href='delete.php?id=".$row['id']."'><button class='w3-button w3-red'>Delete</button></a>";
+                    echo "<a href='delete.php?id=".$row['id']."'><button class='w3-button w3-red'>削除する</button></a>";
                     echo " ";
-                    echo "<a href='fix.php?id=".$row['id']."'><button class='w3-button w3-green'>Fix</button></a>";
+                    echo "<a href='fix.php?id=".$row['id']."'><button class='w3-button w3-green'>修正</button></a>";
                 }else{
                     echo "<span class='w3-text-gray'>"."Can'tDelete"."</span>";
                     echo " ";
-                    echo "<a href='fix.php?id=".$row['id']."'><button class='w3-button w3-green'>Fix</button></a>";
+                    echo "<a href='fix.php?id=".$row['id']."'><button class='w3-button w3-green'>修正</button></a>";
                 }
                 echo "</th>";
                 echo "</tr>";
@@ -162,11 +162,11 @@ if($_SESSION['username']!="admin"){
                 echo $rows['mota'];
                 echo "</th>";
                 echo "<th>";
-                echo "<a class='w3-red w3-button w3-round' href='delete_book.php?id=".$rows['idSach']."'>Delete</a>";
+                echo "<a class='w3-red w3-button w3-round' href='delete_book.php?id=".$rows['idSach']."'>削除する</a>";
                 echo"<br><br>";
-                echo "<a class='w3-green w3-button w3-round' href='fixSach.php?id=".$rows['idSach']."'>Fix</a>";
+                echo "<a class='w3-green w3-button w3-round' href='fixSach.php?id=".$rows['idSach']."'>修正</a>";
                 echo"<br><br>";
-                echo "<a class='w3-orange w3-button w3-round' href='sale.php?id=".$rows['idSach']."'>Sale</a>";
+                echo "<a class='w3-orange w3-button w3-round' href='sale.php?id=".$rows['idSach']."'>セール</a>";
                 echo "</th>";
                 echo "</tr>";
             }
