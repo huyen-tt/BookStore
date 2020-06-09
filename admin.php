@@ -57,7 +57,7 @@ if($_SESSION['username']!="admin"){
         <form method="POST" action="giohang.php">
         <label>ショッピングカートを見る:</label>
         <input type="text" name="ten" placeholder="Nhập tên...">
-        <input type="submit" value="Xem">
+        <input type="submit" value="見る">
         </form></div>
     <br><br>
     <div style="margin-left:40%">
