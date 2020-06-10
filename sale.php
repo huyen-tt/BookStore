@@ -36,10 +36,11 @@
 </body>
 <?php
 if(isset($_POST['gia_sale'])){
+    require_once("connection.php");
     $resetID=1;
     $resetGia=$_POST['gia_sale'];
     $sql = "UPDATE sach SET idDM = '$resetID',gia_sale = '$resetGia' WHERE idSach='$id';";
-    mysql_query($sql);
+    $query = mysqli_query($conn,$sql);
     header("location:admin.php");
 }
 ?>
