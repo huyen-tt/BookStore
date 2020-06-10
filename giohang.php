@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ショッピングカート</title>
+<title>カート</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/CSS.css">
@@ -39,13 +39,13 @@
 <?php
 if(isset($_SESSION['username'])){
     ?>
-        <h2>顧客の注文: <?php echo($name);?></h2>
+        <h2>顧客の注文： <?php echo($name);?></h2>
         <div class="w3-container">
         <table class="w3-table-all">
             <thead>
             <tr style='background-color:rgba(34, 34, 51,0.85) ; color:white'>
                 <th>本の受取人</th>
-                <th>書名</th>
+                <th>本名</th>
                 <th>量</th>
                 <th>住所</th>
                 <th>電話番号</th>
@@ -53,7 +53,7 @@ if(isset($_SESSION['username'])){
             </tr>
             </thead>
             <?php
-                require_once("connection.php");//ket noi toi co so du lieu 
+                require_once("connection.php"); 
                 $sql = "SELECT idG,nguoinhan,tenSach,soluong,diachi,sdt,tongtien FROM sach,giohang,chitiet,user WHERE username=nguoidat AND idG=idGct AND idSct=idSach AND nguoidat='$name'";     
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
@@ -75,9 +75,9 @@ if(isset($_SESSION['username'])){
         </div>
     <?php
     if($_SESSION['username']=='admin'){
-        echo"<a href='admin.php'>Quay về Trang Admin</a>";
+        echo"<a href='admin.php'>アドミンページに戻る</a>";
     }else{
-        echo"<a href='index.php'>Quay về Trang chủ</a>";
+        echo"<a href='index.php'>ホームページに戻る</a>";
     }
 }else {
     header("location:index.php");
